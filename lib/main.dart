@@ -23,13 +23,41 @@ class _HomeState extends State<Home> {
         title: Text("Frases do dia"),
         backgroundColor: Colors.black,
       ),
-      body: Container(
-         padding: EdgeInsets.only(top:10),
-         child: Column(
-           children:<Widget>[
+      body: Center(
+        child: Container(
+            padding: EdgeInsets.only(top:10),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment:CrossAxisAlignment.center,
+                children:<Widget>[
+                  Image.asset("images/logo1.png"),
+                  Text(
+                      "Clique abaixo para gerar uma frase",
+                      textAlign:TextAlign.justify,
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.bold,
+                          color:Colors.black
 
-           ]
-         )
+                      )
+                  ),
+                  ElevatedButton(
+                    child: Text(
+                      "Nova Frase",
+                      style:TextStyle(
+                          fontSize: 20,
+                          color:Colors.white
+                      ),
+                    ) ,
+                    style: TextButton.styleFrom(
+                        backgroundColor: Colors.black
+                    ),
+                    onPressed: (){},
+                  )
+                ]
+            )
+        ),
       ),
 
     );
